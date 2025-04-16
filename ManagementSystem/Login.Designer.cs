@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textun = new TextBox();
+            textuser = new TextBox();
             label1 = new Label();
             panel1 = new Panel();
             panel2 = new Panel();
@@ -41,13 +41,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // textun
+            // textuser
             // 
-            textun.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textun.Location = new Point(176, 181);
-            textun.Name = "textun";
-            textun.Size = new Size(204, 33);
-            textun.TabIndex = 0;
+            textuser.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textuser.Location = new Point(176, 181);
+            textuser.Name = "textuser";
+            textuser.Size = new Size(204, 33);
+            textuser.TabIndex = 0;
             // 
             // label1
             // 
@@ -104,16 +104,18 @@
             textpass.Name = "textpass";
             textpass.Size = new Size(204, 33);
             textpass.TabIndex = 4;
+            textpass.UseSystemPasswordChar = true;
             // 
             // bntlogin
             // 
             bntlogin.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bntlogin.Location = new Point(222, 371);
+            bntlogin.Location = new Point(226, 396);
             bntlogin.Name = "bntlogin";
             bntlogin.Size = new Size(129, 52);
             bntlogin.TabIndex = 6;
             bntlogin.Text = "Login";
             bntlogin.UseVisualStyleBackColor = true;
+            bntlogin.Click += bntlogin_Click;
             // 
             // checkBox1
             // 
@@ -138,10 +140,11 @@
             Controls.Add(panel2);
             Controls.Add(panel1);
             Controls.Add(label1);
-            Controls.Add(textun);
+            Controls.Add(textuser);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -150,7 +153,7 @@
 
         #endregion
 
-        private TextBox textun;
+        private TextBox textuser;
         private Label label1;
         private Panel panel1;
         private Panel panel2;

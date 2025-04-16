@@ -1,43 +1,18 @@
 ﻿using System.Data.SqlClient;
-using System.Data;
-
+using System.Configuration;
 
 namespace DataLayer
 {
-    public class ConexionDB
+    public static class ConexionDB
     {
-        private readonly SqlConnection conn;
+        public static SqlConnection ObtenerConexion()
+        {
+            string cadena = ConfigurationManager.ConnectionStrings["ManagementSystemDB"]?.ConnectionString;
 
-        public ConexionDB()
-        {
-            conn = new SqlConnection("Data Source=DESKTOP-372NBM0\\RIC;Initial Catalog=ManagementSystemDB;Integrated Security=True");
-        }
-        //patrol de dise;o singelton
-        public SqlConnection AbrirConexion()
-        {
-            if (conn.State == ConnectionState.Closed)
-                conn.Open();
-            return conn;
-        }
+            if (string.IsNullOrEmpty(cadena))
+                throw new InvalidOperationException("⚠ La cadena de conexión no está definida correctamente en App.config.");
 
-        public void CerrarConexion()
-        {
-            if (conn.State == ConnectionState.Open)
-                conn.Close();
-        }
-
-        public bool ProbarConexion()
-        {
-            try
-            {
-                AbrirConexion();
-                CerrarConexion();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
+            return new SqlConnection(cadena);
         }
     }
 }
