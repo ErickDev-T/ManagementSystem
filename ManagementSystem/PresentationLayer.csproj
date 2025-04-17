@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
   </ItemGroup>
 
   <ItemGroup>

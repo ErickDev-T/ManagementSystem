@@ -3,10 +3,17 @@ using System.Data.SqlClient;
 using PresentationLayer;
 using DataLayer;
 using BusinessLayer;
+using System.Runtime.InteropServices;
+using Guna.UI2.WinForms;
+
+
+
 
 
 namespace ManagementSystem
 {
+
+
     public partial class Form1 : Form
     {
         private readonly UserService servicio = new UserService();
@@ -25,7 +32,7 @@ namespace ManagementSystem
 
         private void bntlogin_Click(object sender, EventArgs e)
         {
-            if (textuser.Text == "" || textpass.Text == "")
+            if (usertxtd.Text == "" || passwtxt.Text == "")
             {
                 MessageBox.Show("Please enter username and password");
             }
@@ -33,9 +40,8 @@ namespace ManagementSystem
             {
                 try
                 {
-
-                    string usuario = textuser.Text;
-                    string clave = textpass.Text;
+                    string usuario = usertxtd.Text;
+                    string clave = passwtxt.Text;
 
                     string rol = servicio.IniciarSesion(usuario, clave);
 
@@ -55,13 +61,149 @@ namespace ManagementSystem
                     {
                         MessageBox.Show("Credenciales incorrectas");
                     }
-                 
+
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                passwtxt.UseSystemPasswordChar = false;
+            }
+            else
+            {
+                passwtxt.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            {
+                DialogResult result = MessageBox.Show("¿Estás segura de que quieres cerrar la aplicación?",
+                                                      "Confirmar salida",
+                                                      MessageBoxButtons.YesNo,
+                                                      MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    Application.Exit();
+                }
+            }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textuser_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            if (usertxtd.Text == "" || passwtxt.Text == "")
+            {
+                MessageBox.Show("Please enter username and password");
+            }
+            else
+            {
+                try
+                {
+                    string usuario = usertxtd.Text;
+                    string clave = passwtxt.Text;
+
+                    string rol = servicio.IniciarSesion(usuario, clave);
+
+                    if (rol == "Admin")
+                    {
+                        MessageBox.Show("Bienvenido Administrador");
+                        new Admin().Show();
+                        this.Hide();
+                    }
+                    else if (rol == "Cashier")
+                    {
+                        MessageBox.Show("Bienvenido Cajero");
+                        new Cashier().Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Credenciales incorrectas");
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+        // Estas funciones son para mover el formulario con el panel
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bar_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+            if (configurationPanel.Visible)
+            {
+                loginpanel.Visible = true;
+                configurationPanel.Hide();
+            }
+            else if (!configurationPanel.Visible)
+            {
+                configurationPanel.Visible = true;
+                loginpanel.Hide();
+            }
+
+        }
+
+        private void guna2ShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
