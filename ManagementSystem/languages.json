@@ -1,0 +1,16 @@
+{
+  "es": {
+    "languagelabel": "Idioma",
+    "lblLogin": "Iniciar sesion",
+    "lblUsuario": "Usuario",
+    "lblClave": "Contrase�a",
+    "btnLogin": "Entrar"
+  },
+  "en": {
+    "languagelabel": "Language",
+    "lblLogin": "Login",
+    "lblUsuario": "Username",
+    "lblClave": "Password",
+    "btnLogin": "Login"
+  }
+}

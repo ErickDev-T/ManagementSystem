@@ -1,13 +1,11 @@
-using System.Configuration;
+﻿using System.Configuration;
 using System.Data.SqlClient;
 using PresentationLayer;
 using DataLayer;
 using BusinessLayer;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
-
-
-
+using Utilities;
 
 
 namespace ManagementSystem
@@ -16,6 +14,9 @@ namespace ManagementSystem
 
     public partial class Form1 : Form
     {
+
+        private string selectedLanguage = "es";
+
         private readonly UserService servicio = new UserService();
         public Form1()
         {
@@ -85,7 +86,7 @@ namespace ManagementSystem
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             {
-                DialogResult result = MessageBox.Show("�Est�s segura de que quieres cerrar la aplicaci�n?",
+                DialogResult result = MessageBox.Show("¿Estás segura de que quieres cerrar la aplicación?",
                                                       "Confirmar salida",
                                                       MessageBoxButtons.YesNo,
                                                       MessageBoxIcon.Question);
@@ -204,6 +205,44 @@ namespace ManagementSystem
         private void guna2HtmlLabel5_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private Dictionary<string, string> mapaIdiomas = new()
+        {
+            { "Spanish", "es" },
+            { "English", "en" }
+        };
+
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            // Obtener el idioma visible del ComboBox
+            string visible = comboLanguage.SelectedItem.ToString();
+
+            if (mapaIdiomas.ContainsKey(visible))
+            {
+                string idioma = mapaIdiomas[visible]; // ← "es" o "en"
+
+                // Cargar JSON
+                LanguageManager.CargarIdiomas();
+
+                // Aplicar traducción
+                Traductor.AplicarIdioma(this, idioma);
+
+                // Mostrar confirmación
+                LanguageManager.MostrarTraducciones(idioma);
+                MessageBox.Show("Idioma aplicado correctamente: " + idioma.ToUpper(), "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("⚠️ Idioma no reconocido.");
+            }
         }
     }
 }

@@ -9,11 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="languages.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.7" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>
