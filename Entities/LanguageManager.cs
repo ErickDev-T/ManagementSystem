@@ -55,7 +55,7 @@ namespace Entities
                 salida += $"{par.Key}: {par.Value}\n";
             }
 
-            //MessageBox.Show(salida, "Traducciones");
+            MessageBox.Show(salida, "Traducciones");
         }
     }
 }

@@ -40,6 +40,12 @@ namespace ManagementSystem
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,12 +54,6 @@ namespace ManagementSystem
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -67,14 +67,14 @@ namespace ManagementSystem
             usertxtd = new Guna.UI2.WinForms.Guna2TextBox();
             showPassLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            loginpanel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            passwtxt = new Guna.UI2.WinForms.Guna2TextBox();
+            btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             pictureBox1 = new PictureBox();
             bar = new Guna.UI2.WinForms.Guna2Panel();
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             configurationPanel = new Guna.UI2.WinForms.Guna2Panel();
-            loginpanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            passwtxt = new Guna.UI2.WinForms.Guna2TextBox();
-            btnLogin = new Guna.UI2.WinForms.Guna2GradientButton();
             btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             languagelabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             comboLanguage = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -83,10 +83,10 @@ namespace ManagementSystem
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel1.SuspendLayout();
+            loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             bar.SuspendLayout();
             configurationPanel.SuspendLayout();
-            loginpanel.SuspendLayout();
             SuspendLayout();
             // 
             // guna2PictureBox1
@@ -208,82 +208,6 @@ namespace ManagementSystem
             guna2Panel1.TabIndex = 18;
             guna2Panel1.Paint += guna2Panel1_Paint;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.BackColor = SystemColors.Control;
-            guna2Transition1.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Transition2.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(1071, 571);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(47, 47);
-            pictureBox1.TabIndex = 20;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
-            // 
-            // bar
-            // 
-            bar.Controls.Add(guna2ControlBox2);
-            bar.Controls.Add(guna2ControlBox1);
-            bar.CustomizableEdges = customizableEdges17;
-            guna2Transition1.SetDecoration(bar, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Transition2.SetDecoration(bar, Guna.UI2.AnimatorNS.DecorationType.None);
-            bar.Location = new Point(-3, 0);
-            bar.Name = "bar";
-            bar.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            bar.Size = new Size(1130, 40);
-            bar.TabIndex = 18;
-            bar.Paint += guna2Panel2_Paint;
-            bar.MouseDown += bar_MouseDown;
-            // 
-            // guna2ControlBox2
-            // 
-            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            guna2ControlBox2.CustomizableEdges = customizableEdges13;
-            guna2Transition2.SetDecoration(guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Transition1.SetDecoration(guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2ControlBox2.FillColor = SystemColors.Control;
-            guna2ControlBox2.ForeColor = SystemColors.Control;
-            guna2ControlBox2.IconColor = Color.Black;
-            guna2ControlBox2.Location = new Point(1041, 8);
-            guna2ControlBox2.Name = "guna2ControlBox2";
-            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            guna2ControlBox2.Size = new Size(32, 29);
-            guna2ControlBox2.TabIndex = 1;
-            // 
-            // guna2ControlBox1
-            // 
-            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            guna2ControlBox1.CustomizableEdges = customizableEdges15;
-            guna2Transition2.SetDecoration(guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Transition1.SetDecoration(guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2ControlBox1.FillColor = SystemColors.Control;
-            guna2ControlBox1.ForeColor = SystemColors.Control;
-            guna2ControlBox1.IconColor = Color.Black;
-            guna2ControlBox1.Location = new Point(1090, 8);
-            guna2ControlBox1.Name = "guna2ControlBox1";
-            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna2ControlBox1.Size = new Size(32, 29);
-            guna2ControlBox1.TabIndex = 0;
-            guna2ControlBox1.Click += guna2ControlBox1_Click;
-            // 
-            // configurationPanel
-            // 
-            configurationPanel.BackColor = SystemColors.Control;
-            configurationPanel.Controls.Add(btnSave);
-            configurationPanel.Controls.Add(languagelabel);
-            configurationPanel.Controls.Add(comboLanguage);
-            configurationPanel.CustomizableEdges = customizableEdges23;
-            guna2Transition1.SetDecoration(configurationPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            guna2Transition2.SetDecoration(configurationPanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            configurationPanel.Location = new Point(629, 83);
-            configurationPanel.Name = "configurationPanel";
-            configurationPanel.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            configurationPanel.Size = new Size(410, 465);
-            configurationPanel.TabIndex = 21;
-            configurationPanel.Visible = false;
-            // 
             // loginpanel
             // 
             loginpanel.BackColor = SystemColors.Control;
@@ -360,6 +284,82 @@ namespace ManagementSystem
             btnLogin.TabIndex = 15;
             btnLogin.Text = "Login";
             btnLogin.Click += guna2GradientButton1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.Control;
+            guna2Transition1.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition2.SetDecoration(pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1071, 571);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(47, 47);
+            pictureBox1.TabIndex = 20;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click_1;
+            // 
+            // bar
+            // 
+            bar.Controls.Add(guna2ControlBox2);
+            bar.Controls.Add(guna2ControlBox1);
+            bar.CustomizableEdges = customizableEdges17;
+            guna2Transition1.SetDecoration(bar, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition2.SetDecoration(bar, Guna.UI2.AnimatorNS.DecorationType.None);
+            bar.Location = new Point(-3, 0);
+            bar.Name = "bar";
+            bar.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            bar.Size = new Size(1130, 40);
+            bar.TabIndex = 18;
+            bar.Paint += guna2Panel2_Paint;
+            bar.MouseDown += bar_MouseDown;
+            // 
+            // guna2ControlBox2
+            // 
+            guna2ControlBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox2.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            guna2ControlBox2.CustomizableEdges = customizableEdges13;
+            guna2Transition2.SetDecoration(guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition1.SetDecoration(guna2ControlBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2ControlBox2.FillColor = SystemColors.Control;
+            guna2ControlBox2.ForeColor = SystemColors.Control;
+            guna2ControlBox2.IconColor = Color.Black;
+            guna2ControlBox2.Location = new Point(1041, 8);
+            guna2ControlBox2.Name = "guna2ControlBox2";
+            guna2ControlBox2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2ControlBox2.Size = new Size(32, 29);
+            guna2ControlBox2.TabIndex = 1;
+            // 
+            // guna2ControlBox1
+            // 
+            guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.CustomizableEdges = customizableEdges15;
+            guna2Transition2.SetDecoration(guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition1.SetDecoration(guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2ControlBox1.FillColor = SystemColors.Control;
+            guna2ControlBox1.ForeColor = SystemColors.Control;
+            guna2ControlBox1.IconColor = Color.Black;
+            guna2ControlBox1.Location = new Point(1090, 8);
+            guna2ControlBox1.Name = "guna2ControlBox1";
+            guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2ControlBox1.Size = new Size(32, 29);
+            guna2ControlBox1.TabIndex = 0;
+            guna2ControlBox1.Click += guna2ControlBox1_Click;
+            // 
+            // configurationPanel
+            // 
+            configurationPanel.BackColor = SystemColors.Control;
+            configurationPanel.Controls.Add(btnSave);
+            configurationPanel.Controls.Add(languagelabel);
+            configurationPanel.Controls.Add(comboLanguage);
+            configurationPanel.CustomizableEdges = customizableEdges23;
+            guna2Transition1.SetDecoration(configurationPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition2.SetDecoration(configurationPanel, Guna.UI2.AnimatorNS.DecorationType.None);
+            configurationPanel.Location = new Point(629, 83);
+            configurationPanel.Name = "configurationPanel";
+            configurationPanel.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            configurationPanel.Size = new Size(410, 465);
+            configurationPanel.TabIndex = 21;
+            configurationPanel.Visible = false;
             // 
             // btnSave
             // 
@@ -480,12 +480,12 @@ namespace ManagementSystem
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2Panel1.ResumeLayout(false);
+            loginpanel.ResumeLayout(false);
+            loginpanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             bar.ResumeLayout(false);
             configurationPanel.ResumeLayout(false);
             configurationPanel.PerformLayout();
-            loginpanel.ResumeLayout(false);
-            loginpanel.PerformLayout();
             ResumeLayout(false);
         }
 
