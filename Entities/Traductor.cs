@@ -1,7 +1,13 @@
-﻿using System.Text.Json;
-using System.Windows.Forms; // ← para usar MessageBox
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Text.Json;
+using System.Windows.Forms;
 
-namespace Utilities
+
+namespace Entities
 {
     public class Traductor
     {
@@ -20,5 +26,4 @@ namespace Utilities
             }
         }
     }
-
 }

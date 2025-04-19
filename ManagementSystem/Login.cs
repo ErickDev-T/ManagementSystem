@@ -5,7 +5,7 @@ using DataLayer;
 using BusinessLayer;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
-
+using Entities;
 
 namespace ManagementSystem
 {
