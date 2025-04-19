@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,12 @@ namespace PresentationLayer.Forms_Admin
         }
 
         private void ProductsForm_Load(object sender, EventArgs e)
+        {
+            ProductsTabla.DataSource = ProductDAO.GetActive();
+
+        }
+
+        private void ProductsTabla_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

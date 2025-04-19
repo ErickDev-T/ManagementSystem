@@ -75,6 +75,7 @@ namespace ManagementSystem
             guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             configurationPanel = new Guna.UI2.WinForms.Guna2Panel();
+            configurationLabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSave = new Guna.UI2.WinForms.Guna2GradientButton();
             languagelabel = new Guna.UI2.WinForms.Guna2HtmlLabel();
             comboLanguage = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -124,7 +125,7 @@ namespace ManagementSystem
             guna2ToggleSwitch1.ShadowDecoration.BorderRadius = 1;
             guna2ToggleSwitch1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ToggleSwitch1.Size = new Size(35, 20);
-            guna2ToggleSwitch1.TabIndex = 10;
+            guna2ToggleSwitch1.TabIndex = 3;
             guna2ToggleSwitch1.UncheckedState.BorderColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch1.UncheckedState.FillColor = Color.FromArgb(125, 137, 149);
             guna2ToggleSwitch1.UncheckedState.InnerBorderColor = Color.White;
@@ -169,7 +170,8 @@ namespace ManagementSystem
             usertxtd.ShadowDecoration.Enabled = true;
             usertxtd.ShadowDecoration.Shadow = new Padding(-8, -5, 5, 5);
             usertxtd.Size = new Size(288, 44);
-            usertxtd.TabIndex = 15;
+            usertxtd.TabIndex = 1;
+            usertxtd.Tag = "1";
             // 
             // showPassLabel
             // 
@@ -222,7 +224,7 @@ namespace ManagementSystem
             loginpanel.CustomizableEdges = customizableEdges11;
             guna2Transition2.SetDecoration(loginpanel, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Transition1.SetDecoration(loginpanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            loginpanel.Location = new Point(629, 83);
+            loginpanel.Location = new Point(12, 83);
             loginpanel.Name = "loginpanel";
             customizableEdges12.BottomLeft = false;
             customizableEdges12.BottomRight = false;
@@ -259,7 +261,7 @@ namespace ManagementSystem
             passwtxt.ShadowDecoration.Enabled = true;
             passwtxt.ShadowDecoration.Shadow = new Padding(-8, -5, 5, 5);
             passwtxt.Size = new Size(288, 44);
-            passwtxt.TabIndex = 17;
+            passwtxt.TabIndex = 2;
             // 
             // btnLogin
             // 
@@ -281,7 +283,7 @@ namespace ManagementSystem
             btnLogin.Name = "btnLogin";
             btnLogin.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnLogin.Size = new Size(210, 46);
-            btnLogin.TabIndex = 15;
+            btnLogin.TabIndex = 4;
             btnLogin.Text = "Login";
             btnLogin.Click += guna2GradientButton1_Click;
             // 
@@ -348,6 +350,7 @@ namespace ManagementSystem
             // configurationPanel
             // 
             configurationPanel.BackColor = SystemColors.Control;
+            configurationPanel.Controls.Add(configurationLabel);
             configurationPanel.Controls.Add(btnSave);
             configurationPanel.Controls.Add(languagelabel);
             configurationPanel.Controls.Add(comboLanguage);
@@ -360,6 +363,18 @@ namespace ManagementSystem
             configurationPanel.Size = new Size(410, 465);
             configurationPanel.TabIndex = 21;
             configurationPanel.Visible = false;
+            // 
+            // configurationLabel
+            // 
+            configurationLabel.BackColor = Color.Transparent;
+            guna2Transition1.SetDecoration(configurationLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            guna2Transition2.SetDecoration(configurationLabel, Guna.UI2.AnimatorNS.DecorationType.None);
+            configurationLabel.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            configurationLabel.Location = new Point(152, 26);
+            configurationLabel.Name = "configurationLabel";
+            configurationLabel.Size = new Size(110, 23);
+            configurationLabel.TabIndex = 21;
+            configurationLabel.Text = "Configuration";
             // 
             // btnSave
             // 
@@ -519,5 +534,6 @@ namespace ManagementSystem
         private Guna.UI2.WinForms.Guna2GradientButton btnSave;
         private Guna.UI2.WinForms.Guna2TextBox passwtxt;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel configurationLabel;
     }
 }
