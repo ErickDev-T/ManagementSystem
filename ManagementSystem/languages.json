@@ -1,16 +1,22 @@
 {
   "es": {
     "languagelabel": "Idioma",
+    "configurationLabel": "Configuracion",
     "lblLogin": "Iniciar sesion",
-    "lblUsuario": "Usuario",
-    "lblClave": "Contrase�a",
-    "btnLogin": "Entrar"
+    "usertxtd": "Usuario",
+    "passwtxt": "Contrase�a",
+    "btnLogin": "Entrar",
+    "btnSave": "Guardar",
+    "showPassLabel": "Mostras Contraseña"
   },
   "en": {
     "languagelabel": "Language",
+    "configurationLabel": "ConfiguraTion",
     "lblLogin": "Login",
-    "lblUsuario": "Username",
-    "lblClave": "Password",
-    "btnLogin": "Login"
+    "usertxtd": "Username",
+    "passwtxt": "Password",
+    "btnLogin": "Login",
+    "btnSave": "Save",
+    "showPassLabel": "Show Password"
   }
 }

@@ -5,7 +5,6 @@ using DataLayer;
 using BusinessLayer;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
-using Utilities;
 
 
 namespace ManagementSystem
@@ -162,6 +161,7 @@ namespace ManagementSystem
         {
 
         }
+
         // Estas funciones son para mover el formulario con el panel
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -230,18 +230,18 @@ namespace ManagementSystem
                 string idioma = mapaIdiomas[visible]; // ← "es" o "en"
 
                 // Cargar JSON
-                LanguageManager.CargarIdiomas();
+                //LanguageManager.CargarIdiomas();
 
                 // Aplicar traducción
-                Traductor.AplicarIdioma(this, idioma);
+                //Traductor.AplicarIdioma(this, idioma);
 
                 // Mostrar confirmación
-                LanguageManager.MostrarTraducciones(idioma);
+                //LanguageManager.MostrarTraducciones(idioma);
                 MessageBox.Show("Idioma aplicado correctamente: " + idioma.ToUpper(), "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("⚠️ Idioma no reconocido.");
+                MessageBox.Show("Idioma no reconocido.");
             }
         }
     }

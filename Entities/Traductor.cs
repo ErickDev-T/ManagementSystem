@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using System.Windows.Forms;
+using System.Windows.Forms; // ← para usar MessageBox
 
 namespace Utilities
 {
