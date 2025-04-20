@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PresentationLayer.Forms_Admin;
 using PresentationLayer.FormsAdmin;
+using DataLayer;
 
 
 
@@ -61,6 +62,9 @@ namespace PresentationLayer
             this.mainpanel.Controls.Add(f);
             this.mainpanel.Tag = f;
             f.Show();
+
+
+
         }
 
         private void guna2PictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -81,12 +85,37 @@ namespace PresentationLayer
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
         {
             loadform(new AddProducts());
+        }
+
+        private void guna2HtmlLabel11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+            int total = DatosDAO.gettingtTotalProducts();
+            lblProductTypes.Text = total.ToString();
+
+            int totalStock = DatosDAO.gettingtTotalStock();
+            lblTotalUnits.Text = totalStock.ToString();
+
         }
     }
 }

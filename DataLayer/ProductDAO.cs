@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace DataLayer
             List<Product> list = new List<Product>();
 
             using (SqlConnection conn = ConexionDB.ObtenerConexion())
-
+            //OBTENER PRODUCTOS ACTIVOS
             {
 
                 conn.Open();
@@ -39,7 +40,7 @@ namespace DataLayer
                 return list;
             }
         }
-
+        //OBTENER PRODUCTOS INACTIVOS
         public static List<Product> GetInactive()
         {
             List<Product> list = new List<Product>();
@@ -65,6 +66,34 @@ namespace DataLayer
                 return list;
             }
         }
+
+
+        //ADD PRODUCT
+        public static bool AgregarProducto(Product p)
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_AgregarProducto", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@Nombre", p.Name);
+                cmd.Parameters.AddWithValue("@Precio", p.Price);
+                cmd.Parameters.AddWithValue("@Stock", p.Stock);
+                cmd.Parameters.AddWithValue("@Estado", 1);
+
+                int filas = cmd.ExecuteNonQuery();
+
+                return filas > 0;
+            }
+        }
+
+
+
+
+
+
     }
 
 }
