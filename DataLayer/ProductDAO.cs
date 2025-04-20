@@ -22,7 +22,7 @@ namespace DataLayer
             {
 
                 conn.Open();
-                string query = "SELECT IdProducto, Nombre, Precio, Stock FROM Productos WHERE Estado = 1";
+                string query = "SELECT ProductID, ProductName, Price, Stock,CategoryID  FROM Products WHERE IsActive = 1";
                 SqlCommand cmd = new SqlCommand(query, conn);
                 SqlDataReader reader = cmd.ExecuteReader();
 
@@ -69,7 +69,7 @@ namespace DataLayer
 
 
         //ADD PRODUCT
-        public static bool AgregarProducto(Product p)
+        public static bool addProduct(Product product)
         {
             using (SqlConnection conn = ConexionDB.ObtenerConexion())
             {
@@ -78,16 +78,16 @@ namespace DataLayer
                 SqlCommand cmd = new SqlCommand("sp_AgregarProducto", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
-                cmd.Parameters.AddWithValue("@Nombre", p.Name);
-                cmd.Parameters.AddWithValue("@Precio", p.Price);
-                cmd.Parameters.AddWithValue("@Stock", p.Stock);
-                cmd.Parameters.AddWithValue("@Estado", 1);
+                cmd.Parameters.AddWithValue("@ProductName", product.Name);
+                cmd.Parameters.AddWithValue("@Price", product.Price);
+                cmd.Parameters.AddWithValue("@Stock", product.Stock);
+                cmd.Parameters.AddWithValue("@CategoryID", product.CategoryID);
 
                 int filas = cmd.ExecuteNonQuery();
-
                 return filas > 0;
             }
         }
+
 
 
 
