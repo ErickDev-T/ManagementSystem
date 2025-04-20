@@ -20,10 +20,31 @@ namespace PresentationLayer.FormsAdmin
             InitializeComponent();
         }
 
-        private void AddProducts_Load(object sender, EventArgs e)
+
+        private void CargarCategorias()
         {
 
+
+            categoryGrid.DataSource = CategoriaBL.ObtenerTodas();
         }
+
+        private void AddProducts_Load(object sender, EventArgs e)
+        {
+            CargarCategorias();
+            categoryGrid.DefaultCellStyle.Font = new Font("Segoe UI", 12);
+            categoryGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
+
+
+            categoryGrid.Columns[0].Width = 20;
+            categoryGrid.Columns[1].Width = 90;
+
+
+            //// Encabezados: fondo negro, texto blanco
+            categoryGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 133, 202);
+
+        }
+
+
 
         private void AddBNT_Click(object sender, EventArgs e)
         {
@@ -35,7 +56,7 @@ namespace PresentationLayer.FormsAdmin
                 MessageBox.Show("Please fill in all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
 
             if (!double.TryParse(priceTXT.Text, out double price))
             {
@@ -71,19 +92,7 @@ namespace PresentationLayer.FormsAdmin
             {
                 MessageBox.Show(mensaje, "❌", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //Product nuevo = new Product
-            //{
-            //    Name = nameTXT.Text,
-            //    Price = double.Parse(priceTXT.Text),
-            //    Stock = int.Parse(stockTXT.Text)
-            //};
 
-            //bool agregado = ProductDAO.AgregarProducto(nuevo);
-
-            //if (agregado)
-            //    MessageBox.Show("Producto agregado correctamente ✅");
-            //else
-            //    MessageBox.Show("Error al agregar el producto ❌");
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
@@ -102,6 +111,16 @@ namespace PresentationLayer.FormsAdmin
         }
 
         private void categoryIDTXTC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void categoryGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
