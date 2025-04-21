@@ -32,37 +32,30 @@ namespace PresentationLayer.Forms_Admin
             ProductsTabla.Columns[1].Width = 300;
 
 
-            //// Encabezados: fondo negro, texto blanco
             ProductsTabla.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 133, 202);
-            //ProductsTabla.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            //ProductsTabla.EnableHeadersVisualStyles = false;
 
-            //// Fondo general blanco
-            //ProductsTabla.BackgroundColor = Color.White;
-            //ProductsTabla.DefaultCellStyle.BackColor = Color.White;
-            //ProductsTabla.DefaultCellStyle.ForeColor = Color.Black;
 
-            //// Color al seleccionar: gris oscuro
-            //ProductsTabla.DefaultCellStyle.SelectionBackColor = Color.FromArgb(50, 50, 50); // gris oscuro
-            //ProductsTabla.DefaultCellStyle.SelectionForeColor = Color.White;
-
-            //// Alternar filas: gris muy claro
-            //ProductsTabla.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
-
-            //// Otros ajustes visuales
-            //ProductsTabla.GridColor = Color.LightGray;
-            //ProductsTabla.RowTemplate.Height = 35;
-            //ProductsTabla.BorderStyle = BorderStyle.None;
-            //ProductsTabla.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            //// Quitar el tema de Guna2
-            //ProductsTabla.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            //ProductsTabla.ThemeStyle = null;
-
+            MostrarResumenDashboard();
 
 
 
         }
+
+
+        private void MostrarResumenDashboard()
+        {
+            // Puedes usar try-catch si prefieres manejar errores visuales
+            lblProductosVendidos.Text = DatosDAO.ObtenerTotalProductosVendidos().ToString();
+
+            decimal vendidoHoy = DatosDAO.ObtenerTotalVendidoHoy();
+            lblVendidoHoy.Text = $"${vendidoHoy:N2}";
+
+            decimal vendidoMes = DatosDAO.ObtenerTotalVendidoMes();
+            lblVendidoMes.Text = $"${vendidoMes:N2}";
+
+            lblUsuarios.Text = DatosDAO.ObtenerTotalUsuarios().ToString();
+        }
+
 
         private void ProductsTabla_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {

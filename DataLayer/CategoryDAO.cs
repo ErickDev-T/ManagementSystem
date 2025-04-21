@@ -21,7 +21,7 @@ namespace DataLayer
                 {
                     lista.Add(new Categoria
                     {
-                        CategoryID = reader.GetInt32(0),
+                        Id = reader.GetInt32(0),
                         CategoryName = reader.GetString(1),
                         Description = reader.IsDBNull(2) ? null : reader.GetString(2),
                     });
@@ -32,3 +32,4 @@ namespace DataLayer
         }
     }
 }
+    

@@ -83,16 +83,16 @@ namespace PresentationLayer
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblStockOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblNombreOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblMostStock = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblNombreMostStock = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblOutStock = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblNombreMenorStock = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -146,27 +146,27 @@ namespace PresentationLayer
             guna2ControlBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox4.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox4.CustomizableEdges = customizableEdges1;
-            guna2ControlBox4.FillColor = Color.FromArgb(12, 133, 202);
+            guna2ControlBox4.FillColor = Color.FromArgb(42, 126, 213);
             guna2ControlBox4.ForeColor = SystemColors.Control;
             guna2ControlBox4.IconColor = Color.Black;
             guna2ControlBox4.Location = new Point(1012, 3);
             guna2ControlBox4.Name = "guna2ControlBox4";
             guna2ControlBox4.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2ControlBox4.Size = new Size(55, 34);
+            guna2ControlBox4.Size = new Size(55, 40);
             guna2ControlBox4.TabIndex = 20;
             // 
             // guna2ControlBox3
             // 
             guna2ControlBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox3.CustomizableEdges = customizableEdges3;
-            guna2ControlBox3.FillColor = Color.FromArgb(12, 133, 202);
+            guna2ControlBox3.FillColor = Color.FromArgb(42, 126, 213);
             guna2ControlBox3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2ControlBox3.ForeColor = SystemColors.Control;
             guna2ControlBox3.IconColor = Color.Black;
             guna2ControlBox3.Location = new Point(1063, 3);
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2ControlBox3.Size = new Size(47, 34);
+            guna2ControlBox3.Size = new Size(47, 40);
             guna2ControlBox3.TabIndex = 2;
             // 
             // guna2ControlBox2
@@ -315,8 +315,8 @@ namespace PresentationLayer
             // 
             guna2Panel4.BackColor = Color.Transparent;
             guna2Panel4.BorderRadius = 10;
-            guna2Panel4.Controls.Add(guna2HtmlLabel9);
-            guna2Panel4.Controls.Add(guna2HtmlLabel10);
+            guna2Panel4.Controls.Add(lblStockOut);
+            guna2Panel4.Controls.Add(lblNombreOut);
             guna2Panel4.Controls.Add(guna2HtmlLabel11);
             guna2Panel4.CustomizableEdges = customizableEdges19;
             guna2Panel4.FillColor = Color.White;
@@ -326,27 +326,28 @@ namespace PresentationLayer
             guna2Panel4.Size = new Size(144, 73);
             guna2Panel4.TabIndex = 31;
             // 
-            // guna2HtmlLabel9
+            // lblStockOut
             // 
-            guna2HtmlLabel9.BackColor = Color.Transparent;
-            guna2HtmlLabel9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel9.ForeColor = Color.FromArgb(42, 126, 213);
-            guna2HtmlLabel9.Location = new Point(89, 36);
-            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(15, 22);
-            guna2HtmlLabel9.TabIndex = 29;
-            guna2HtmlLabel9.Text = "--";
+            lblStockOut.BackColor = Color.Transparent;
+            lblStockOut.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStockOut.ForeColor = Color.FromArgb(42, 126, 213);
+            lblStockOut.Location = new Point(89, 36);
+            lblStockOut.Name = "lblStockOut";
+            lblStockOut.Size = new Size(15, 22);
+            lblStockOut.TabIndex = 29;
+            lblStockOut.Text = "--";
             // 
-            // guna2HtmlLabel10
+            // lblNombreOut
             // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.ForeColor = Color.Black;
-            guna2HtmlLabel10.Location = new Point(22, 36);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(40, 22);
-            guna2HtmlLabel10.TabIndex = 28;
-            guna2HtmlLabel10.Text = "Peras";
+            lblNombreOut.BackColor = Color.Transparent;
+            lblNombreOut.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombreOut.ForeColor = Color.Black;
+            lblNombreOut.Location = new Point(22, 36);
+            lblNombreOut.Name = "lblNombreOut";
+            lblNombreOut.Size = new Size(33, 22);
+            lblNombreOut.TabIndex = 28;
+            lblNombreOut.Text = "-----";
+            lblNombreOut.Click += guna2HtmlLabel10_Click;
             // 
             // guna2HtmlLabel11
             // 
@@ -363,8 +364,8 @@ namespace PresentationLayer
             // 
             guna2Panel3.BackColor = Color.Transparent;
             guna2Panel3.BorderRadius = 10;
-            guna2Panel3.Controls.Add(guna2HtmlLabel6);
-            guna2Panel3.Controls.Add(guna2HtmlLabel7);
+            guna2Panel3.Controls.Add(lblMostStock);
+            guna2Panel3.Controls.Add(lblNombreMostStock);
             guna2Panel3.Controls.Add(guna2HtmlLabel8);
             guna2Panel3.CustomizableEdges = customizableEdges21;
             guna2Panel3.FillColor = Color.White;
@@ -374,27 +375,27 @@ namespace PresentationLayer
             guna2Panel3.Size = new Size(144, 73);
             guna2Panel3.TabIndex = 30;
             // 
-            // guna2HtmlLabel6
+            // lblMostStock
             // 
-            guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.ForeColor = Color.FromArgb(42, 126, 213);
-            guna2HtmlLabel6.Location = new Point(89, 36);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(15, 22);
-            guna2HtmlLabel6.TabIndex = 29;
-            guna2HtmlLabel6.Text = "--";
+            lblMostStock.BackColor = Color.Transparent;
+            lblMostStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMostStock.ForeColor = Color.FromArgb(42, 126, 213);
+            lblMostStock.Location = new Point(89, 36);
+            lblMostStock.Name = "lblMostStock";
+            lblMostStock.Size = new Size(15, 22);
+            lblMostStock.TabIndex = 29;
+            lblMostStock.Text = "--";
             // 
-            // guna2HtmlLabel7
+            // lblNombreMostStock
             // 
-            guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel7.ForeColor = Color.Black;
-            guna2HtmlLabel7.Location = new Point(22, 36);
-            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(40, 22);
-            guna2HtmlLabel7.TabIndex = 28;
-            guna2HtmlLabel7.Text = "Peras";
+            lblNombreMostStock.BackColor = Color.Transparent;
+            lblNombreMostStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombreMostStock.ForeColor = Color.Black;
+            lblNombreMostStock.Location = new Point(22, 36);
+            lblNombreMostStock.Name = "lblNombreMostStock";
+            lblNombreMostStock.Size = new Size(33, 22);
+            lblNombreMostStock.TabIndex = 28;
+            lblNombreMostStock.Text = "-----";
             // 
             // guna2HtmlLabel8
             // 
@@ -411,8 +412,8 @@ namespace PresentationLayer
             // 
             guna2Panel7.BackColor = Color.Transparent;
             guna2Panel7.BorderRadius = 10;
-            guna2Panel7.Controls.Add(guna2HtmlLabel3);
-            guna2Panel7.Controls.Add(guna2HtmlLabel5);
+            guna2Panel7.Controls.Add(lblOutStock);
+            guna2Panel7.Controls.Add(lblNombreMenorStock);
             guna2Panel7.Controls.Add(guna2HtmlLabel4);
             guna2Panel7.CustomizableEdges = customizableEdges23;
             guna2Panel7.FillColor = Color.White;
@@ -422,27 +423,28 @@ namespace PresentationLayer
             guna2Panel7.Size = new Size(144, 73);
             guna2Panel7.TabIndex = 10;
             // 
-            // guna2HtmlLabel3
+            // lblOutStock
             // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel3.ForeColor = Color.FromArgb(42, 126, 213);
-            guna2HtmlLabel3.Location = new Point(89, 36);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(15, 22);
-            guna2HtmlLabel3.TabIndex = 29;
-            guna2HtmlLabel3.Text = "--";
+            lblOutStock.BackColor = Color.Transparent;
+            lblOutStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblOutStock.ForeColor = Color.FromArgb(42, 126, 213);
+            lblOutStock.Location = new Point(89, 36);
+            lblOutStock.Name = "lblOutStock";
+            lblOutStock.Size = new Size(15, 22);
+            lblOutStock.TabIndex = 29;
+            lblOutStock.Text = "--";
+            lblOutStock.Click += guna2HtmlLabel3_Click;
             // 
-            // guna2HtmlLabel5
+            // lblNombreMenorStock
             // 
-            guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.ForeColor = Color.Black;
-            guna2HtmlLabel5.Location = new Point(22, 36);
-            guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(40, 22);
-            guna2HtmlLabel5.TabIndex = 28;
-            guna2HtmlLabel5.Text = "Peras";
+            lblNombreMenorStock.BackColor = Color.Transparent;
+            lblNombreMenorStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNombreMenorStock.ForeColor = Color.Black;
+            lblNombreMenorStock.Location = new Point(22, 36);
+            lblNombreMenorStock.Name = "lblNombreMenorStock";
+            lblNombreMenorStock.Size = new Size(33, 22);
+            lblNombreMenorStock.TabIndex = 28;
+            lblNombreMenorStock.Text = "-----";
             // 
             // guna2HtmlLabel4
             // 
@@ -599,11 +601,12 @@ namespace PresentationLayer
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = Color.White;
-            guna2HtmlLabel2.Location = new Point(3, 36);
+            guna2HtmlLabel2.Location = new Point(3, 27);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(85, 22);
             guna2HtmlLabel2.TabIndex = 26;
             guna2HtmlLabel2.Text = "363 product";
+            guna2HtmlLabel2.Click += guna2HtmlLabel2_Click;
             // 
             // guna2HtmlLabel1
             // 
@@ -689,17 +692,17 @@ namespace PresentationLayer
         private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblMostStock;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreMostStock;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblOutStock;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreMenorStock;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblStockOut;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;

@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using PresentationLayer.Forms_Admin;
 using PresentationLayer.FormsAdmin;
 using DataLayer;
+using BusinessLayer;
 
 
 
@@ -85,7 +86,7 @@ namespace PresentationLayer
 
         private void guna2PictureBox3_Click(object sender, EventArgs e)
         {
-
+            loadform(new Reports());
         }
 
         private void guna2PictureBox4_Click(object sender, EventArgs e)
@@ -115,6 +116,51 @@ namespace PresentationLayer
 
             int totalStock = DatosDAO.gettingtTotalStock();
             lblTotalUnits.Text = totalStock.ToString();
+
+            MostrarProductoMenorStock();
+            MostrarProductoMayorStock();
+            MostrarProductoAgotado();
+
+        }
+
+        private void MostrarProductoMenorStock()
+        {
+            var producto = ProductService.ObtenerProductoMenorStock();
+
+            lblNombreMenorStock.Text = producto.Nombre;
+            lblOutStock.Text = producto.Cantidad.ToString();
+        }
+
+        private void MostrarProductoMayorStock()
+        {
+            var producto = ProductService.ObtenerProductoMayorStock();
+
+            lblNombreMostStock.Text = producto.Nombre;
+            lblMostStock.Text = producto.Cantidad.ToString();
+        }
+
+
+        private void MostrarProductoAgotado()
+        {
+            var agotado = ProductService.ObtenerUnProductoAgotado();
+
+            lblNombreOut.Text = agotado.Nombre;
+        }
+
+
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel10_Click(object sender, EventArgs e)
+        {
 
         }
     }

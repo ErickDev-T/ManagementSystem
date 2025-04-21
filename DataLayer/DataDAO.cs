@@ -50,5 +50,147 @@ namespace DataLayer
             return total;
         }
 
+
+        public static (string Nombre, int Cantidad) ObtenerProductoMenorStock()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_ProductoMenorStock", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string nombre = reader.GetString(1);
+                        int stock = reader.GetInt32(2);
+                        return (nombre, stock);
+                    }
+                    else
+                    {
+                        return ("N/A", 0); // por si no hay productos
+                    }
+                }
+            }
+        }
+
+
+        public static (string Nombre, int Cantidad) ObtenerProductoMayorStock()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_ProductoMayorStock", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string nombre = reader.GetString(0);
+                        int stock = reader.GetInt32(1);
+                        return (nombre, stock);
+                    }
+                    else
+                    {
+                        return ("N/A", 0);
+                    }
+                }
+            }
+        }
+
+
+
+
+        public static (string Nombre, int Stock) ObtenerUnProductoAgotado()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_ProductoAgotado", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string nombre = reader.GetString(0);
+                        int stock = reader.GetInt32(1);
+                        return (nombre, stock);
+                    }
+                    else
+                    {
+                        return ("All in stock", 0); // mensaje por defecto
+                    }
+                }
+            }
+        }
+
+
+
+        public static int ObtenerTotalProductosVendidos()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_TotalProductosVendidos", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                object result = cmd.ExecuteScalar();
+
+                // 👇 Validación completa: null o DBNull
+                return (result != null && result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+            }
+        }
+
+
+        public static decimal ObtenerTotalVendidoHoy()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_TotalVendidoHoy", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                object result = cmd.ExecuteScalar();
+                return (result != null && result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+
+            }
+        }
+
+        public static decimal ObtenerTotalVendidoMes()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_TotalVendidoMes", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                object result = cmd.ExecuteScalar();
+                return (result != null && result != DBNull.Value) ? Convert.ToDecimal(result) : 0;
+            }
+        }
+
+
+        public static int ObtenerTotalUsuarios()
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_TotalUsuarios", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                object result = cmd.ExecuteScalar();
+                return (result != null) ? Convert.ToInt32(result) : 0;
+            }
+        }
+
+
+
+
     }
 }

@@ -35,12 +35,25 @@ namespace PresentationLayer.FormsAdmin
             categoryGrid.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13, FontStyle.Bold);
 
 
-            categoryGrid.Columns[0].Width = 20;
-            categoryGrid.Columns[1].Width = 90;
-
+            categoryGrid.Columns[0].Width = 150;
+            categoryGrid.Columns[1].Width = 150;
+            categoryGrid.Columns[2].Width = 15;
 
             //// Encabezados: fondo negro, texto blanco
             categoryGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(12, 133, 202);
+
+
+
+
+
+
+
+            categoryGrid.ColumnHeadersHeight = 40;
+
+           
+
+
+
 
         }
 

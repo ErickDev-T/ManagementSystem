@@ -104,10 +104,10 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             categoryGrid.DefaultCellStyle = dataGridViewCellStyle3;
             categoryGrid.GridColor = Color.FromArgb(231, 229, 255);
-            categoryGrid.Location = new Point(396, 110);
+            categoryGrid.Location = new Point(372, 106);
             categoryGrid.Name = "categoryGrid";
             categoryGrid.RowHeadersVisible = false;
-            categoryGrid.Size = new Size(334, 280);
+            categoryGrid.Size = new Size(380, 280);
             categoryGrid.TabIndex = 16;
             categoryGrid.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             categoryGrid.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -143,7 +143,7 @@
             categoryIDTXTC.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             categoryIDTXTC.Font = new Font("Segoe UI", 9F);
             categoryIDTXTC.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            categoryIDTXTC.Location = new Point(166, 354);
+            categoryIDTXTC.Location = new Point(146, 354);
             categoryIDTXTC.Name = "categoryIDTXTC";
             categoryIDTXTC.PlaceholderText = "";
             categoryIDTXTC.SelectedText = "";
@@ -172,7 +172,7 @@
             stockTXT.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             stockTXT.Font = new Font("Segoe UI", 9F);
             stockTXT.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            stockTXT.Location = new Point(166, 281);
+            stockTXT.Location = new Point(146, 267);
             stockTXT.Name = "stockTXT";
             stockTXT.PlaceholderText = "";
             stockTXT.SelectedText = "";
@@ -192,7 +192,7 @@
             priceTXT.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             priceTXT.Font = new Font("Segoe UI", 9F);
             priceTXT.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            priceTXT.Location = new Point(166, 196);
+            priceTXT.Location = new Point(146, 187);
             priceTXT.Name = "priceTXT";
             priceTXT.PlaceholderText = "";
             priceTXT.SelectedText = "";
@@ -221,7 +221,7 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.Location = new Point(41, 114);
+            guna2HtmlLabel6.Location = new Point(41, 118);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(61, 32);
             guna2HtmlLabel6.TabIndex = 9;
@@ -231,7 +231,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.Location = new Point(41, 200);
+            guna2HtmlLabel5.Location = new Point(41, 191);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(51, 32);
             guna2HtmlLabel5.TabIndex = 8;
@@ -241,7 +241,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel4.Location = new Point(41, 285);
+            guna2HtmlLabel4.Location = new Point(41, 271);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(58, 32);
             guna2HtmlLabel4.TabIndex = 7;
@@ -258,7 +258,7 @@
             nameTXT.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             nameTXT.Font = new Font("Segoe UI", 9F);
             nameTXT.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            nameTXT.Location = new Point(166, 110);
+            nameTXT.Location = new Point(146, 114);
             nameTXT.Name = "nameTXT";
             nameTXT.PlaceholderText = "";
             nameTXT.SelectedText = "";

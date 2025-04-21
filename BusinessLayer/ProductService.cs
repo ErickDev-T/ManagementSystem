@@ -38,7 +38,7 @@ namespace BusinessLayer
                     mensaje = "Stock cannot be negative.";
                     return false;
                 }
-
+                
 
                 if (agregado = true)
                 {
@@ -58,5 +58,36 @@ namespace BusinessLayer
                 return false;
             }
         }
+
+
+        public static List<Product> GetInactiveProducts()
+        {
+            return ProductDAO.GetInactiveProducts();
+        }
+
+
+
+        public static (string Nombre, int Cantidad) ObtenerProductoMenorStock()
+        {
+            return DatosDAO.ObtenerProductoMenorStock();
+        }
+
+
+        public static (string Nombre, int Cantidad) ObtenerProductoMayorStock()
+        {
+            return DatosDAO.ObtenerProductoMayorStock();
+        }
+
+        public static (string Nombre, int Stock) ObtenerUnProductoAgotado()
+        {
+            return DatosDAO.ObtenerUnProductoAgotado();
+        }
+
+
     }
+
+
+
+
+
 }

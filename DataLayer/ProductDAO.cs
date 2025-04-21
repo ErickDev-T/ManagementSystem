@@ -89,6 +89,62 @@ namespace DataLayer
         }
 
 
+        //search product by name
+        public static List<Product> GetInactiveProducts()
+        {
+            List<Product> list = new List<Product>();
+
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                string query = "SELECT ProductID, ProductName, Price, Stock, CategoryID FROM Products WHERE IsActive = 0";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    list.Add(new Product
+                    {
+                        Id = reader.GetInt32(0),
+                        Name = reader.GetString(1),
+                        Price = (double)reader.GetDecimal(2),
+                        Stock = reader.GetInt32(3),
+                        CategoryID = reader.GetInt32(4).ToString()
+                    });
+                }
+            }
+             
+            return list;
+        }
+
+
+        //search product by id
+        public static Product BuscarProductoPorID(int id)
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_BuscarProductoPorID", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ProductID", id);
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return new Product
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("ProductID")),
+                            Name = reader.GetString(reader.GetOrdinal("ProductName")),
+                            Price = (double)reader.GetDecimal(reader.GetOrdinal("Price")),
+                            Stock = reader.GetInt32(reader.GetOrdinal("Stock")),
+                        };
+                    }
+                }
+            }
+
+            return null; // No encontrado
+        }
 
 
 
