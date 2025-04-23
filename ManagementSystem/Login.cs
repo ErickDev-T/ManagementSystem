@@ -54,7 +54,7 @@ namespace ManagementSystem
                     else if (rol == "Cashier")
                     {
                         MessageBox.Show("Bienvenido Cajero");
-                        new Cashier().Show();
+                        new Cashier(this).Show();
                         this.Hide();
                     }
                     else
@@ -138,7 +138,7 @@ namespace ManagementSystem
                     }
                     else if (rol == "Cashier")
                     {
-                        new Cashier().Show();
+                        new Cashier(this).Show();
                         this.Hide();
                     }
                     else
@@ -215,7 +215,7 @@ namespace ManagementSystem
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            
+
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
@@ -234,13 +234,18 @@ namespace ManagementSystem
                 //Traductor.AplicarIdioma(this, idioma);
 
                 // Mostrar confirmación
-               // LanguageManager.MostrarTraducciones(idioma);
+                // LanguageManager.MostrarTraducciones(idioma);
                 MessageBox.Show("Idioma aplicado correctamente: " + idioma.ToUpper(), "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 MessageBox.Show("Idioma no reconocido.");
             }
+        }
+
+        private void configurationPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

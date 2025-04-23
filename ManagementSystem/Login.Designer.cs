@@ -363,6 +363,7 @@ namespace ManagementSystem
             configurationPanel.Size = new Size(410, 465);
             configurationPanel.TabIndex = 21;
             configurationPanel.Visible = false;
+            configurationPanel.Paint += configurationPanel_Paint;
             // 
             // configurationLabel
             // 

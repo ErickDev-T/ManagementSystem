@@ -83,7 +83,6 @@ namespace PresentationLayer
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            lblStockOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblNombreOut = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
@@ -208,6 +207,7 @@ namespace PresentationLayer
             guna2PictureBox5.SizeMode = PictureBoxSizeMode.CenterImage;
             guna2PictureBox5.TabIndex = 24;
             guna2PictureBox5.TabStop = false;
+            guna2PictureBox5.Click += guna2PictureBox5_Click;
             // 
             // btnAddProduct
             // 
@@ -315,7 +315,6 @@ namespace PresentationLayer
             // 
             guna2Panel4.BackColor = Color.Transparent;
             guna2Panel4.BorderRadius = 10;
-            guna2Panel4.Controls.Add(lblStockOut);
             guna2Panel4.Controls.Add(lblNombreOut);
             guna2Panel4.Controls.Add(guna2HtmlLabel11);
             guna2Panel4.CustomizableEdges = customizableEdges19;
@@ -326,23 +325,12 @@ namespace PresentationLayer
             guna2Panel4.Size = new Size(144, 73);
             guna2Panel4.TabIndex = 31;
             // 
-            // lblStockOut
-            // 
-            lblStockOut.BackColor = Color.Transparent;
-            lblStockOut.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStockOut.ForeColor = Color.FromArgb(42, 126, 213);
-            lblStockOut.Location = new Point(89, 36);
-            lblStockOut.Name = "lblStockOut";
-            lblStockOut.Size = new Size(15, 22);
-            lblStockOut.TabIndex = 29;
-            lblStockOut.Text = "--";
-            // 
             // lblNombreOut
             // 
             lblNombreOut.BackColor = Color.Transparent;
             lblNombreOut.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNombreOut.ForeColor = Color.Black;
-            lblNombreOut.Location = new Point(22, 36);
+            lblNombreOut.Location = new Point(62, 36);
             lblNombreOut.Name = "lblNombreOut";
             lblNombreOut.Size = new Size(33, 22);
             lblNombreOut.TabIndex = 28;
@@ -380,7 +368,7 @@ namespace PresentationLayer
             lblMostStock.BackColor = Color.Transparent;
             lblMostStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMostStock.ForeColor = Color.FromArgb(42, 126, 213);
-            lblMostStock.Location = new Point(89, 36);
+            lblMostStock.Location = new Point(116, 36);
             lblMostStock.Name = "lblMostStock";
             lblMostStock.Size = new Size(15, 22);
             lblMostStock.TabIndex = 29;
@@ -428,7 +416,7 @@ namespace PresentationLayer
             lblOutStock.BackColor = Color.Transparent;
             lblOutStock.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblOutStock.ForeColor = Color.FromArgb(42, 126, 213);
-            lblOutStock.Location = new Point(89, 36);
+            lblOutStock.Location = new Point(116, 36);
             lblOutStock.Name = "lblOutStock";
             lblOutStock.Size = new Size(15, 22);
             lblOutStock.TabIndex = 29;
@@ -701,7 +689,6 @@ namespace PresentationLayer
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblStockOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNombreOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;

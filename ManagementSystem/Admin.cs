@@ -64,8 +64,6 @@ namespace PresentationLayer
             this.mainpanel.Tag = f;
             f.Show();
 
-
-
         }
 
         private void guna2PictureBox2_MouseDown(object sender, MouseEventArgs e)
@@ -162,6 +160,11 @@ namespace PresentationLayer
         private void guna2HtmlLabel10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2PictureBox5_Click(object sender, EventArgs e)
+        {
+            loadform(new settings(this));
         }
     }
 }

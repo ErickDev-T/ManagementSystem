@@ -137,7 +137,7 @@ namespace DataLayer
             using (SqlConnection conn = ConexionDB.ObtenerConexion())
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("sp_TotalProductosVendidos", conn);
+                SqlCommand cmd = new SqlCommand("sp_ProductosVendidosCantidad", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
 
                 object result = cmd.ExecuteScalar();
@@ -188,6 +188,31 @@ namespace DataLayer
                 return (result != null) ? Convert.ToInt32(result) : 0;
             }
         }
+
+
+        public static bool RegistrarVentaRapida(int userId, decimal total, int cantidad)
+        {
+            using (SqlConnection conn = ConexionDB.ObtenerConexion())
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand("sp_RegistrarVentaRapida1", conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar los parámetros
+                    cmd.Parameters.AddWithValue("@UserID", userId);
+                    cmd.Parameters.AddWithValue("@TotalAmount", total);
+                    cmd.Parameters.AddWithValue("@Quantity", cantidad);
+
+                    int rows = cmd.ExecuteNonQuery();
+                    return rows > 0;
+                }
+            }
+        }
+
+
+
+
 
 
 
