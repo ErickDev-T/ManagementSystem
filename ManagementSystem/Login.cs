@@ -5,7 +5,7 @@ using DataLayer;
 using BusinessLayer;
 using System.Runtime.InteropServices;
 using Guna.UI2.WinForms;
-using Entities;
+using UIUtilities;
 
 namespace ManagementSystem
 {
@@ -228,13 +228,13 @@ namespace ManagementSystem
                 string idioma = mapaIdiomas[visible]; // ← "es" o "en"
 
                 // Cargar JSON
-                //LanguageManager.CargarIdiomas();
+                LanguageManager.CargarIdiomas();
 
                 // Aplicar traducción
-                //Traductor.AplicarIdioma(this, idioma);
+                Traductor.AplicarIdioma(this, idioma);
 
                 // Mostrar confirmación
-                // LanguageManager.MostrarTraducciones(idioma);
+                 LanguageManager.MostrarTraducciones(idioma);
                 MessageBox.Show("Idioma aplicado correctamente: " + idioma.ToUpper(), "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

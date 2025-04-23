@@ -224,7 +224,7 @@ namespace ManagementSystem
             loginpanel.CustomizableEdges = customizableEdges11;
             guna2Transition2.SetDecoration(loginpanel, Guna.UI2.AnimatorNS.DecorationType.None);
             guna2Transition1.SetDecoration(loginpanel, Guna.UI2.AnimatorNS.DecorationType.None);
-            loginpanel.Location = new Point(12, 83);
+            loginpanel.Location = new Point(629, 83);
             loginpanel.Name = "loginpanel";
             customizableEdges12.BottomLeft = false;
             customizableEdges12.BottomRight = false;
