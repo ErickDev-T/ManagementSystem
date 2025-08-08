@@ -10,7 +10,7 @@ namespace DataLayer
             string cadena = ConfigurationManager.ConnectionStrings["ManagementSystemDB"]?.ConnectionString;
 
             if (string.IsNullOrEmpty(cadena))
-                throw new InvalidOperationException("⚠ La cadena de conexión no está definida correctamente en App.config.");
+                throw new InvalidOperationException("La cadena de conexión no está definida correctamente en App.config.");
 
             return new SqlConnection(cadena);
         }
